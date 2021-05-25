@@ -42,7 +42,7 @@ list_file_normal = os.listdir(path_normal)
 fig = plt.figure(figsize=(14, 14))
 
 # se obtienen cinco imagenes de baches
-for index, filename in enumerate(list_file_potholes[:5]):
+for index, filename in enumerate(list_file_potholes[:10]):
     path_img = os.path.join(path_potholes, filename)
     y = fig.add_subplot(6, 5, index+1)
 
@@ -67,7 +67,7 @@ for index, filename in enumerate(list_file_potholes[:5]):
     y.axes.get_yaxis().set_visible(False)
 
 # se obtienen cinco imagenes de carreteras sin baches
-for index, filename in enumerate(list_file_normal[:5]):
+for index, filename in enumerate(list_file_normal[:10]):
     path_img = os.path.join(path_normal, filename)
     y = fig.add_subplot(6, 5, index+6)
 

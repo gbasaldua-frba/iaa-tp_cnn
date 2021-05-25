@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.models import model_from_json
+from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 from mlxtend.plotting import plot_confusion_matrix
-
 from tensorflow.compat.v1 import ConfigProto
 from tensorflow.compat.v1 import InteractiveSession
 
@@ -83,6 +83,9 @@ for index, filename in enumerate(list_file_normal[:100]):
         test_preds.append('bache')
     else:
         test_preds.append('sin_bache')
+
+# se muestran las métricas del modelo
+print(classification_report(test_labels, test_preds))
 
 # se genera la matriz de confusion del modelo
 cm = confusion_matrix(test_labels, test_preds)
