@@ -17,13 +17,6 @@ config.gpu_options.allow_growth = True
 session = InteractiveSession(config=config)
 
 
-# funcion de split para el armado de los dataset de 
-# entrenamiento y validacion
-
-def split_data(dataset, ratio=0.85):
-    index = int(len(dataset) * ratio)
-    return dataset[:index], dataset[index:]
-
 # vector de imagenes
 images = []
 # paths de imagenes
@@ -100,7 +93,7 @@ print("Modelo compilado")
 model.summary()
 
 # entrenamiento del modelo
-history = model.fit(x=train_data, y=train_label, epochs=50, batch_size=128, validation_split=0.1)
+history = model.fit(x=train_data, y=train_label, epochs=200, batch_size=128, validation_split=0.1)
 
 print("Fin de entrenamiento del modelo")
 

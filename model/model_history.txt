@@ -1,0 +1,123 @@
+
+
+
+                                                                                Model: "sequential"
+                                                                                _________________________________________________________________
+                                                                                Layer (type)                 Output Shape              Param #   
+                                                                                =================================================================
+                                                                                conv2d (Conv2D)              (None, 64, 64, 32)        2432      
+                                                                                _________________________________________________________________
+                                                                                max_pooling2d (MaxPooling2D) (None, 13, 13, 32)        0         
+                                                                                _________________________________________________________________
+                                                                                conv2d_1 (Conv2D)            (None, 13, 13, 50)        40050     
+                                                                                _________________________________________________________________
+                                                                                max_pooling2d_1 (MaxPooling2 (None, 3, 3, 50)          0         
+                                                                                _________________________________________________________________
+                                                                                conv2d_2 (Conv2D)            (None, 3, 3, 80)          100080    
+                                                                                _________________________________________________________________
+                                                                                max_pooling2d_2 (MaxPooling2 (None, 1, 1, 80)          0         
+                                                                                _________________________________________________________________
+                                                                                dropout (Dropout)            (None, 1, 1, 80)          0         
+                                                                                _________________________________________________________________
+                                                                                flatten (Flatten)            (None, 80)                0         
+                                                                                _________________________________________________________________
+                                                                                dense (Dense)                (None, 256)               20736     
+                                                                                _________________________________________________________________
+                                                                                dropout_1 (Dropout)          (None, 256)               0         
+                                                                                _________________________________________________________________
+                                                                                dense_1 (Dense)              (None, 2)                 514       
+                                                                                =================================================================
+                                                                                Total params: 163,812
+                                                                                Trainable params: 163,812
+                                                                                Non-trainable params: 0
+                                                                                _________________________________________________________________
+
+
+32x32 50 epocas
+
+              precision    recall  f1-score   support
+
+       bache       0.87      0.80      0.83        50
+   sin_bache       0.81      0.88      0.85        50
+
+    accuracy                           0.84       100
+   macro avg       0.84      0.84      0.84       100
+weighted avg       0.84      0.84      0.84       100
+
+
+32x32 100 epocas
+
+              precision    recall  f1-score   support
+
+       bache       0.89      0.80      0.84        50
+   sin_bache       0.82      0.90      0.86        50
+
+    accuracy                           0.85       100
+   macro avg       0.85      0.85      0.85       100
+weighted avg       0.85      0.85      0.85       100
+
+
+64x64 100 epocas
+accuracy: 98.17%
+
+              precision    recall  f1-score   support
+
+       bache       0.88      0.86      0.87        50
+   sin_bache       0.86      0.88      0.87        50
+
+    accuracy                           0.87       100
+   macro avg       0.87      0.87      0.87       100
+weighted avg       0.87      0.87      0.87       100
+
+
+63x64 150 epocas
+accuracy: 99.19%
+
+              precision    recall  f1-score   support
+
+       bache       0.93      0.86      0.90        50
+   sin_bache       0.87      0.94      0.90        50
+
+    accuracy                           0.90       100
+   macro avg       0.90      0.90      0.90       100
+weighted avg       0.90      0.90      0.90       100
+
+
+63x64 200 epocas
+accuracy: 99.59%
+
+              precision    recall  f1-score   support
+
+       bache       0.94      0.92      0.93        50
+   sin_bache       0.92      0.94      0.93        50
+
+    accuracy                           0.93       100
+   macro avg       0.93      0.93      0.93       100
+weighted avg       0.93      0.93      0.93       100
+
+
+63x64 250 epocas
+accuracy: 99.39%
+
+              precision    recall  f1-score   support
+
+       bache       0.91      0.86      0.89        50
+   sin_bache       0.87      0.92      0.89        50
+
+    accuracy                           0.89       100
+   macro avg       0.89      0.89      0.89       100
+weighted avg       0.89      0.89      0.89       100
+
+
+63x64 300 epocas
+accuracy: 99.19%
+
+              precision    recall  f1-score   support
+
+       bache       0.93      0.86      0.90        50
+   sin_bache       0.87      0.94      0.90        50
+
+    accuracy                           0.90       100
+   macro avg       0.90      0.90      0.90       100
+weighted avg       0.90      0.90      0.90       100
+
